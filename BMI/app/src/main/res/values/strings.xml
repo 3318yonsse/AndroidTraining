@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BMI</string>
+    <string name="skinny">저체중</string>
+    <string name="normal">정상</string>
+    <string name="fat">과체중</string>
+    <string name="very_fat">비만</string>
+    <string name="vv_fat">고도비만</string>
+
+</resources>
