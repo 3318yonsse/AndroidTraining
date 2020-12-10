@@ -51,16 +51,16 @@ public class MainActivity extends Activity {
                     Toast.makeText(getApplicationContext(), "값을 입력해주세요", Toast.LENGTH_LONG).show();
                 }
 //
-                if(BMI > 18.5) {
-                    resulImage.setImageResource(R.drawable.blue);
+                if(BMI <= 18.5) {
+                    resulImage.setImageResource(R.drawable.first);
                 } else if (BMI >= 18.5 && BMI <=22.9){
-                    resulImage.setImageResource(R.drawable.green);
+                    resulImage.setImageResource(R.drawable.second);
                 } else if (BMI >= 23 && BMI <= 24.9){
-                    resulImage.setImageResource(R.drawable.orange);
+                    resulImage.setImageResource(R.drawable.thrid);
                 } else if (BMI >= 25 && BMI <=29.9){
-                    resulImage.setImageResource(R.drawable.red);
+                    resulImage.setImageResource(R.drawable.fourth);
                 }else {
-                    resulImage.setImageResource(R.drawable.images);
+                    resulImage.setImageResource(R.drawable.fifth);
                 }
 
 
