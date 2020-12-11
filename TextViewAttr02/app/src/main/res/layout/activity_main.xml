@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="------입력 문자 제한------"
+        />
+
+
+    <!-- digit한 글자만 쓸 수 있음 -->
+   <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="aeiou"
+        android:digits="aeiou"
+        />
+
+    <!-- 숫자만 -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1234"
+        android:inputType="number"
+        />
+
+    <!-- 실수 -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-1234"
+        android:inputType="numberSigned"
+        />
+
+    <!-- 소수점 -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="12.34"
+        android:inputType="numberDecimal"
+        />
+
+    <!-- -값 & 실수 -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-12.34"
+        android:inputType="numberDecimal|numberSigned"
+        />
+
+    <!-- 비밀번호 -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-12.34"
+        android:inputType="textPassword"
+        />
+
+</LinearLayout>

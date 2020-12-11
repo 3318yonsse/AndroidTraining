@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="----- 대소문자 변환 -----"
+        />
+
+    <!-- 대문자만 쓸수 있음 -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Character"
+        android:inputType="textCapCharacters"
+        />
+
+    <!-- 첫글자만 대문자 -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Words"
+        android:inputType="textCapWords"
+        />
+
+    <!-- 문장의 첫 글자만 대문자 -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sentences"
+        android:inputType="textCapSentences"
+        />
+
+    <!-- 긴 문자열 생략방법-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="How are you? Fine! Thank you and you? Just fine! How about this phone? 대한민국"
+        android:singleLine="true"
+
+        />
+
+    <!-- 앞쪽 생략 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="How are you? Fine! Thank you and you? Just fine! How about this phone? 대한민국"
+        android:singleLine="true"
+        android:ellipsize="start"
+        />
+
+    <!-- 중간쪽 생략 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="How are you? Fine! Thank you and you? Just fine! How about this phone? 대한민국"
+        android:singleLine="true"
+        android:ellipsize="middle"
+        />
+
+    <!-- 뒤쪽 생략 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="How are you? Fine! Thank you and you? Just fine! How about this phone? 대한민국"
+        android:singleLine="true"
+        android:ellipsize="end"
+        />
+
+    <!-- 입력칸에 치기전에 먼저 띄워지는 텍스트 -> 텍스트를 입력하면 없어짐! -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:hint="input your name"
+        android:textColorHint="#ff0000"
+        />
+
+
+
+</LinearLayout>

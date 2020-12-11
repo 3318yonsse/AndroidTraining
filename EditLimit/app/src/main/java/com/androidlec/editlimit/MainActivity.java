@@ -1,0 +1,26 @@
+package com.androidlec.editlimit;
+
+
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.text.InputFilter;
+import android.widget.EditText;
+
+public class MainActivity extends Activity {
+
+    EditText editText;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // 3글자 제한!
+        editText = findViewById(R.id.limit);
+        editText.setFilters(new InputFilter[]{
+                new InputFilter.LengthFilter(3)
+        });
+    }
+}
