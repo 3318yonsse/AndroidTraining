@@ -42,30 +42,53 @@
         >
 
     <!-- BMI 정보 -->
-      <LinearLayout
 
-          android:id="@+id/infoImage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-
-        >
-
-
-
-        <ImageView
+        <LinearLayout
+            android:id="@+id/infoImage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/bmiqq"
+            android:orientation="vertical"
+            >
 
 
-            android:adjustViewBounds="true"
 
 
-            />
+
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bmiqq"
 
 
-    </LinearLayout>
+                android:adjustViewBounds="true"
+
+
+                />
+
+
+            <Button
+                android:id="@+id/start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시작"
+                android:backgroundTint="#8C8C8C"
+                android:layout_gravity="center"
+                />
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -82,170 +105,135 @@
 
 
         >
-    <LinearLayout
+
+
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
-        <TextView
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="키(Cm): "
-            android:layout_marginLeft="10dp"
-            android:inputType="number"
-            android:textSize="15dp"
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="키(Cm): "
+                android:layout_marginLeft="10dp"
+                android:inputType="number"
+                android:textSize="15dp"
 
-            />
+                />
 
 
-        <EditText
-            android:id="@+id/height"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            <EditText
+                android:id="@+id/height"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
 
-            android:textColor="#D3D3D3"
-            android:textDirection="rtl"
-            />
+                android:textColor="#D3D3D3"
+                android:textDirection="rtl"
+                />
 
 
         <!-- 몸무게 입력-->
-        <TextView
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="체중(Kg)) : "
-            android:layout_margin="10dp"
-            android:textSize="15dp"
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="체중(Kg)) : "
+                android:layout_margin="10dp"
+                android:textSize="15dp"
 
-            />
+                />
 
 
-        <EditText
-            android:id="@+id/weight"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            <EditText
+                android:id="@+id/weight"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
 
-            android:textColor="#D3D3D3"
-            android:textDirection="rtl"
-            />
-    </LinearLayout>
+                android:textColor="#D3D3D3"
+                android:textDirection="rtl"
+                />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_weight="1"
 
-            >
+
+            <LinearLayout
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
 
             <Button
+                android:id="@+id/goback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="돌아가기"
+                android:backgroundTint="#8C8C8C"
+                android:layout_gravity="center"
+
+                />
+
+                <Button
                 android:id="@+id/btnCalc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="계산하기"
                 android:backgroundTint="#8C8C8C"
-
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
                 />
+                >
 
-        </LinearLayout>
 
+
+                <TextView
+                    android:id="@+id/result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+
+
+
+                    />
+
+
+
+            </LinearLayout>
+
+            <!-- 해당 이미지 출력 -->
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    />
+
+\
+            </LinearLayout>
     </LinearLayout>
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
 
-
-            >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:text="BMI 지수는"
-
-                />
-
-            <TextView
-                android:id="@+id/result"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-
-
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="입니다"
-                android:layout_weight="1"
-                />
-
-
-        </LinearLayout>
-
-        <!-- 해당 이미지 출력 -->
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-
-
-            <ImageView
-                android:id="@+id/image"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                />
-
-            <ImageView
-                android:id="@+id/good"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/dl01"
-                android:maxHeight="300px"
-
-                android:adjustViewBounds="true"
-
-
-                />
-
-
-        </LinearLayout>
-
+    </LinearLayout>
 
     </FrameLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        >
 
-        <Button
-            android:id="@+id/start"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="시작"
-            android:backgroundTint="#8C8C8C"
-
-            />
-
-    </LinearLayout>
     <!-- 계산하 버튼 -->
 
 
