@@ -130,7 +130,18 @@
         android:layout_gravity="center"
         >
 
+        <Button
+            android:id="@+id/recordbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:onClick="onButton2Clicked"
+            android:text="상세기록"
+            android:backgroundTint="#ff0000"
+            android:textColor="@color/black"
 
+            />
         <Button
             android:id="@+id/backbtn"
             android:layout_width="wrap_content"

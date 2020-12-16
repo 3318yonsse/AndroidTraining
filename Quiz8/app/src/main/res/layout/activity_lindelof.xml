@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".degea">
+    tools:context=".degea"
+    android:background="@color/black">
 
 
     <ImageView
@@ -24,6 +25,8 @@
         android:layout_width="match_parent"
         android:layout_height="0px"
         android:layout_weight="1"
+
+
         >
 
 
@@ -31,15 +34,18 @@
             android:id="@+id/pname"
             android:layout_width="0px"
             android:layout_height="wrap_content"
-            android:textSize="40dp"
+            android:textSize="20dp"
             android:layout_weight="1"
             android:gravity="center"
+            android:layout_gravity="center"
             android:text="Victor Lindelof"
+            android:textColor="@color/white"
+
             />
 
 
-    </LinearLayout>
 
+    </LinearLayout>
     <LinearLayout
 
         android:orientation="horizontal"
@@ -50,17 +56,21 @@
 
 
         <TextView
-            android:id="@+id/pposition"
+
             android:layout_width="0px"
             android:layout_height="wrap_content"
-            android:textSize="40dp"
+            android:textSize="20dp"
             android:layout_weight="1"
             android:gravity="center"
+            android:layout_gravity="center"
             android:text="수비수"
+            android:textColor="@color/white"
+
             />
 
 
     </LinearLayout>
+
     <!-- 나이 -->
     <LinearLayout
 
@@ -72,18 +82,20 @@
 
 
         <TextView
-            android:id="@+id/page"
+
             android:layout_width="0px"
             android:layout_height="wrap_content"
-            android:textSize="40dp"
+            android:textSize="20dp"
             android:layout_weight="1"
             android:gravity="center"
+            android:layout_gravity="center"
             android:text="26세"
+            android:textColor="@color/white"
+
             />
 
 
     </LinearLayout>
-
 
 
     <!-- 경기 수-->
@@ -96,32 +108,48 @@
 
 
         <TextView
-            android:id="@+id/pgame"
+
             android:layout_width="0px"
             android:layout_height="wrap_content"
-            android:textSize="40dp"
+            android:textSize="20dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="28경기"
+            android:layout_gravity="center"
+            android:text="29경기"
+            android:textColor="@color/white"
+
             />
 
 
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="0px"
         android:layout_weight="1"
+        android:layout_gravity="center"
         >
 
-
         <Button
-            android:id="@+id/backbtn"
-            android:layout_width="0px"
+            android:id="@+id/recordbtn"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20dp"
             android:layout_weight="1"
-            android:gravity="center"
+            android:onClick="onButton2Clicked"
+            android:text="상세기록"
+            android:backgroundTint="#ff0000"
+            android:textColor="@color/black"
+
+            />
+
+        <Button
+            android:id="@+id/backbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_weight="1"
+
             android:text="돌아가기"
             android:backgroundTint="#ff0000"
             android:textColor="@color/black"
@@ -129,5 +157,4 @@
 
 
     </LinearLayout>
-
 </LinearLayout>

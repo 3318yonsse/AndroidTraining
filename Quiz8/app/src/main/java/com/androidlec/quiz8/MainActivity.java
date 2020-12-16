@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
         data = new ArrayList<ManU>();
 
         data.add(new ManU("1", R.drawable.oneyou, "David de Gea",R.drawable.spain,"30세","David de Gea","30"));
-        data.add(new ManU("29", R.drawable.twoyou, "Aaron Wan-Bissaka",R.drawable.england,"23세","Aaron Wan-Bissaka","28/27"));
+        data.add(new ManU("29", R.drawable.twoyou, "Aaron Wan-Bissaka",R.drawable.england,"수","Aaron Wan-Bissaka","28/27"));
         data.add(new ManU("2", R.drawable.fouryou, "Victor Lindelof",R.drawable.sweden,"26세","Victor Lindelof","29"));
         data.add(new ManU("5", R.drawable.fiveyou, "Harry Maguire",R.drawable.england,"27세","Harry Maguire ","30"));
         data.add(new ManU("23", R.drawable.threeyou, "Luke Shaw",R.drawable.england,"25세","Luke Shaw","24/22"));
