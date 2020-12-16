@@ -39,6 +39,27 @@
 
 
     </LinearLayout>
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        >
+
+
+        <TextView
+            android:id="@+id/pposition"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:textSize="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="미드필더"
+            />
+
+
+    </LinearLayout>
 
     <!-- 나이 -->
     <LinearLayout

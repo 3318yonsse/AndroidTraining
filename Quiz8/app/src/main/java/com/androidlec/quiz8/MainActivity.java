@@ -1,7 +1,8 @@
 package com.androidlec.quiz8;
 
-import androidx.appcompat.app.AppCompatActivity;
 
+
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +12,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
 
     private ArrayList<ManU> data = null;
@@ -30,17 +31,17 @@ public class MainActivity extends AppCompatActivity {
 
         data = new ArrayList<ManU>();
 
-        data.add(new ManU("1", R.drawable.oneyou, "골키퍼",R.drawable.spain,"30세","David de Gea","30"));
-        data.add(new ManU("29", R.drawable.twoyou, "오른쪽 수비수",R.drawable.england,"23세","Aaron Wan-Bissaka","28/27"));
-        data.add(new ManU("2", R.drawable.fouryou, "중앙 수비수",R.drawable.sweden,"26세","Victor Lindelof","29"));
-        data.add(new ManU("5", R.drawable.fiveyou, "중앙 수비수",R.drawable.england,"27세","Harry Maguire ","30"));
-        data.add(new ManU("23", R.drawable.threeyou, "왼쪽 수비수",R.drawable.england,"25세","Luke Shaw","24/22"));
-        data.add(new ManU("31", R.drawable.nineyou, "수비형 미드필더",R.drawable.serbia,"32세","Nemanja Matic","22/19"));
-        data.add(new ManU("17", R.drawable.sevenyou, "중앙 미드필더",R.drawable.brazil,"27세","Fred","28/24"));
-        data.add(new ManU("39", R.drawable.eightyou, "중앙 미드필더",R.drawable.scotland,"24세","Scott Mctominay","18/17"));
-        data.add(new ManU("6", R.drawable.sixyou, "공격형 미드필더",R.drawable.france,"27세","Paul Pogba","25/23"));
-        data.add(new ManU("9", R.drawable.tenyou, "공격수",R.drawable.france,"25세","Anthony Martial","24"));
-        data.add(new ManU("10", R.drawable.elevenyou, "공격수", R.drawable.england,"23세","Marcus Rashford","28"));
+        data.add(new ManU("1", R.drawable.oneyou, "David de Gea",R.drawable.spain,"30세","David de Gea","30"));
+        data.add(new ManU("29", R.drawable.twoyou, "Aaron Wan-Bissaka",R.drawable.england,"23세","Aaron Wan-Bissaka","28/27"));
+        data.add(new ManU("2", R.drawable.fouryou, "Victor Lindelof",R.drawable.sweden,"26세","Victor Lindelof","29"));
+        data.add(new ManU("5", R.drawable.fiveyou, "Harry Maguire",R.drawable.england,"27세","Harry Maguire ","30"));
+        data.add(new ManU("23", R.drawable.threeyou, "Luke Shaw",R.drawable.england,"25세","Luke Shaw","24/22"));
+        data.add(new ManU("31", R.drawable.nineyou, "Nemanja Matic",R.drawable.serbia,"32세","Nemanja Matic","22/19"));
+        data.add(new ManU("17", R.drawable.sevenyou, "Fred",R.drawable.brazil,"27세","Fred","28/24"));
+        data.add(new ManU("39", R.drawable.eightyou, "Scott Mctominay",R.drawable.scotland,"24세","Scott Mctominay","18/17"));
+        data.add(new ManU("6", R.drawable.sixyou, "Paul Pogba",R.drawable.france,"27세","Paul Pogba","25/23"));
+        data.add(new ManU("9", R.drawable.tenyou, "Anthony Martial",R.drawable.france,"25세","Anthony Martial","24"));
+        data.add(new ManU("10", R.drawable.elevenyou, "Marcus Rashford", R.drawable.england,"23세","Marcus Rashford","28"));
 
         adapter = new ManUAdapter(MainActivity.this, R.layout.custom_layout, data);
         listView = findViewById(R.id.lv_player);

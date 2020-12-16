@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".degea">
+    tools:context=".degea"
+    android:background="@color/black">
 
 
     <ImageView
@@ -24,6 +25,8 @@
         android:layout_width="match_parent"
         android:layout_height="0px"
         android:layout_weight="1"
+
+
         >
 
 
@@ -31,11 +34,39 @@
         android:id="@+id/pname"
         android:layout_width="0px"
         android:layout_height="wrap_content"
-        android:textSize="40dp"
+        android:textSize="20dp"
         android:layout_weight="1"
         android:gravity="center"
+        android:layout_gravity="center"
         android:text="David de Gea"
+        android:textColor="@color/white"
+
         />
+
+
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        >
+
+
+        <TextView
+
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="골키퍼"
+            android:textColor="@color/white"
+
+            />
 
 
     </LinearLayout>
@@ -51,13 +82,16 @@
 
 
         <TextView
-            android:id="@+id/page"
+
             android:layout_width="0px"
             android:layout_height="wrap_content"
-            android:textSize="40dp"
+            android:textSize="20dp"
             android:layout_weight="1"
             android:gravity="center"
+            android:layout_gravity="center"
             android:text="30세"
+            android:textColor="@color/white"
+
             />
 
 
@@ -74,32 +108,36 @@
 
 
         <TextView
-            android:id="@+id/pgame"
+
             android:layout_width="0px"
             android:layout_height="wrap_content"
-            android:textSize="40dp"
+            android:textSize="20dp"
             android:layout_weight="1"
             android:gravity="center"
+            android:layout_gravity="center"
             android:text="28경기"
+            android:textColor="@color/white"
+
             />
 
 
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="0px"
         android:layout_weight="1"
+        android:layout_gravity="center"
         >
 
 
         <Button
             android:id="@+id/backbtn"
-            android:layout_width="0px"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20dp"
             android:layout_weight="1"
-            android:gravity="center"
+
             android:text="돌아가기"
             android:backgroundTint="#ff0000"
             android:textColor="@color/black"

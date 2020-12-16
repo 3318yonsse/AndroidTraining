@@ -1,90 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".degea"
+    android:background="@color/black">
+
+
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".degea">
+        android:layout_height="wrap_content"
+        android:src="@drawable/ㅅ"
+        android:maxHeight="250dp"
+        android:maxWidth="250dp"
+        android:adjustViewBounds="true"
+        />
+
+    <!-- 이름 -->
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
 
 
-        <ImageView
-            android:layout_width="match_parent"
+        >
+
+
+        <TextView
+            android:id="@+id/pname"
+            android:layout_width="0px"
             android:layout_height="wrap_content"
-            android:src="@drawable/twoyou"
-            android:maxHeight="250dp"
-            android:maxWidth="250dp"
-            android:adjustViewBounds="true"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="David de Gea"
+            android:textColor="@color/white"
+
             />
 
-        <!-- 이름 -->
-        <LinearLayout
 
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="0px"
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        >
+
+
+        <TextView
+
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
             android:layout_weight="1"
-            >
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="골키퍼"
+            android:textColor="@color/white"
+
+            />
 
 
-            <TextView
-                android:id="@+id/pname"
-                android:layout_width="0px"
-                android:layout_height="wrap_content"
-                android:textSize="40dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Aaron Wan-Bissaka"
-                />
+    </LinearLayout>
+
+    <!-- 나이 -->
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        >
 
 
-        </LinearLayout>
+        <TextView
 
-        <!-- 나이 -->
-        <LinearLayout
-
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="0px"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
             android:layout_weight="1"
-            >
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="30세"
+            android:textColor="@color/white"
+
+            />
 
 
-            <TextView
-                android:id="@+id/page"
-                android:layout_width="0px"
-                android:layout_height="wrap_content"
-                android:textSize="40dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="23세"
-                />
+    </LinearLayout>
 
 
-        </LinearLayout>
-
-
-        <!-- 경기 수-->
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="1"
-            >
-
-
-            <TextView
-                android:id="@+id/pgame"
-                android:layout_width="0px"
-                android:layout_height="wrap_content"
-                android:textSize="40dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="28경기"
-                />
-
-
-        </LinearLayout>
+    <!-- 경기 수-->
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -93,13 +107,37 @@
         >
 
 
-        <Button
-            android:id="@+id/backbtn"
+        <TextView
+
             android:layout_width="0px"
             android:layout_height="wrap_content"
             android:textSize="20dp"
             android:layout_weight="1"
             android:gravity="center"
+            android:layout_gravity="center"
+            android:text="28경기"
+            android:textColor="@color/white"
+
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        >
+
+
+        <Button
+            android:id="@+id/backbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_weight="1"
+
             android:text="돌아가기"
             android:backgroundTint="#ff0000"
             android:textColor="@color/black"
@@ -107,6 +145,4 @@
 
 
     </LinearLayout>
-
-    </LinearLayout>
-
+</LinearLayout>
