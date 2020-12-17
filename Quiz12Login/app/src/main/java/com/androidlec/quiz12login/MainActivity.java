@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("userid", "qqq");
                 intent.putExtra("passwd", "aaa");
                 startActivity(intent);
-
             } else {
-                Toast.makeText(MainActivity.this, "로그인 실패", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "로그인 정보를 확인하세요", Toast.LENGTH_SHORT).show();
+
             }
 
         }
