@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="act">
-        <item>적은 활동</item>
-        <item>적당한 활동</item>
-        <item>많은 활동</item>
+        <item>적다</item>
+        <item>적당하다</item>
+        <item>많다</item>
     </string-array>
 
 

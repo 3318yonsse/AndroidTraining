@@ -32,6 +32,7 @@ public class SlideshowFragment extends Fragment {
     Button button;
     TextView tvheight;
     TextView tvweight;
+    TextView tvweight1;
     double weight;
     double result;
     LinearLayout input;
@@ -40,6 +41,7 @@ public class SlideshowFragment extends Fragment {
     LinearLayout activity1;
     Intent intent = null;
     ImageView imagegood;
+
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -58,6 +60,7 @@ public class SlideshowFragment extends Fragment {
 
         tvweight = root.findViewById(R.id.tv_weight);
         tvheight = root.findViewById(R.id.tv_height);
+        tvweight1 = root.findViewById(R.id.tv_weighti);
         button = root.findViewById(R.id.hb01);
         Log.v("MainActivity TAG", "구간 2----------------");
         // XML 연결 //
@@ -75,7 +78,7 @@ public class SlideshowFragment extends Fragment {
             @Override
             public void onClick(View v) {
 //                double heightextra = 1.75;
-
+                Log.v("TAG","weight-----------------------");
                 if(tvheight.getText().length()==0){
                     Toast.makeText(getActivity(),"정보를 입력헤주세요.",Toast.LENGTH_SHORT).show();
                 }else {
@@ -89,7 +92,7 @@ public class SlideshowFragment extends Fragment {
                     double heightValue = Double.parseDouble(String.valueOf(tvheight.getText()));
                     Log.v("MainActivity TAG", "구간 3----------------");
                     weight = (heightValue * heightValue)*0.0001*normal;
-                    tvweight.setText("표중 체중은 " + (String.format("%.1f",weight)) + "입니다.");
+                    tvweight.setText((String.format("%.1f",weight))+ " Kg");
                     Log.v("MainActivity TAG", "구간 4----------------");
 
                 }
@@ -102,8 +105,9 @@ public class SlideshowFragment extends Fragment {
         root.findViewById(R.id.callButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.v("TAG","activity-----------------------");
                 new AlertDialog.Builder(getContext())
-                        .setTitle("활동 정도를 선택하세요")
+                        .setTitle("당신의 활동 정도는?")
                         .setCancelable(false)
                         .setIcon(R.drawable.checkimage)
                         .setSingleChoiceItems(R.array.act, mSelect,
@@ -117,6 +121,7 @@ public class SlideshowFragment extends Fragment {
                         .setPositiveButton("확인", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
+
                                 Log.v("aaa", Integer.toString(which));
                                 String[] act = getResources().getStringArray(R.array.act);
                                 TextView text = root.findViewById(R.id.result1);
@@ -129,6 +134,9 @@ public class SlideshowFragment extends Fragment {
                                         if(print.getVisibility() == v.VISIBLE) {
                                             print.setVisibility(v.INVISIBLE);
                                             resultlin.setVisibility(v.VISIBLE);
+                                            }
+                                        if(activity1.getVisibility() == v.VISIBLE) {
+                                            activity1.setVisibility(v.INVISIBLE);
                                         }
                                         break;
                                     case 0:
@@ -139,6 +147,9 @@ public class SlideshowFragment extends Fragment {
                                             print.setVisibility(v.INVISIBLE);
                                             resultlin.setVisibility(v.VISIBLE);
                                         }
+                                        if(activity1.getVisibility() == v.VISIBLE) {
+                                            activity1.setVisibility(v.INVISIBLE);
+                                        }
                                         break;
                                     case 1:
                                         result = 40 * weight;
@@ -146,11 +157,14 @@ public class SlideshowFragment extends Fragment {
                                             print.setVisibility(v.INVISIBLE);
                                             resultlin.setVisibility(v.VISIBLE);
                                         }
+                                        if(activity1.getVisibility() == v.VISIBLE) {
+                                            activity1.setVisibility(v.INVISIBLE);
+                                        }
                                         break;
                                 }
                                 Log.v("aaa","233");
                                 String re = Double.toString(result).substring(0,7);
-                                text.setText(re);
+                                text.setText(re+ " Kcal");
                                 Log.v("aaa","3444");
 
                             }
@@ -163,13 +177,33 @@ public class SlideshowFragment extends Fragment {
         root.findViewById(R.id.infoButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                imagegood.setImageResource(R.drawable.activity);
-
-
-
+                Log.v("TAG","button-----------------------");
+                if(activity1.getVisibility() == v.INVISIBLE) {
+                    activity1.setVisibility(v.VISIBLE);
+                } else if(activity1.getVisibility() == v.VISIBLE) {
+                    activity1.setVisibility(v.INVISIBLE);
+                }
 
             }
         });
+
+        root.findViewById(R.id.retry).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(resultlin.getVisibility() == v.VISIBLE) {
+                    resultlin.setVisibility(v.INVISIBLE);
+                    input.setVisibility(v.VISIBLE);
+                    tvheight.setText(null);
+                    tvweight1.setText(null);
+
+
+                }
+            }
+        });
+
+
+
+
 
 
 //        final TextView textView = root.findViewById(R.id.text_slideshow);
